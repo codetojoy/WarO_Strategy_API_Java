@@ -22,10 +22,11 @@ import net.codetojoy.waro.strategy.Strategy;
 public class StrategyService {
 
     @GetMapping("/strategy")
-    public ResponseEntity<Result> selectCard(@RequestParam int prizeCard,
-                                           @RequestParam int maxCard,
-                                           @RequestParam List<Integer> cards,
-                                           @RequestParam String mode
+    public ResponseEntity<Result> selectCard(
+                                    @RequestParam(name="prize_card") int prizeCard,
+                                    @RequestParam(name="max_card") int maxCard,
+                                    @RequestParam List<Integer> cards,
+                                    @RequestParam String mode
                                     ) throws StrategyException {
 
         String now = new Date().toString();
