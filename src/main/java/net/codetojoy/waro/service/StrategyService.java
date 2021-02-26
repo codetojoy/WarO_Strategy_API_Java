@@ -26,8 +26,17 @@ public class StrategyService {
                                     @RequestParam(name="prize_card") int prizeCard,
                                     @RequestParam(name="max_card") int maxCard,
                                     @RequestParam List<Integer> cards,
-                                    @RequestParam String mode
+                                    @RequestParam String mode,
+                                    @RequestParam(name="delay_in_seconds") Integer delayInSeconds
                                     ) throws StrategyException {
+
+        if (delayInSeconds != null) {
+            try {
+                System.out.println("TRACER pathological delay: " + delayInSeconds + " sec");
+                Thread.sleep(delayInSeconds * 1000);
+            } catch (Exception ex) {
+            }
+        }
 
         String now = new Date().toString();
         String prefix = "TRACER " + now + " ";
