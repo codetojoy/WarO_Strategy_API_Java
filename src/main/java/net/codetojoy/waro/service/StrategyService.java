@@ -27,7 +27,7 @@ public class StrategyService {
                                     @RequestParam(name="max_card") int maxCard,
                                     @RequestParam List<Integer> cards,
                                     @RequestParam String mode,
-                                    @RequestParam(name="delay_in_seconds") Integer delayInSeconds
+                                    @RequestParam(name="delay_in_seconds", required=false) Integer delayInSeconds
                                     ) throws StrategyException {
 
         if (delayInSeconds != null) {
