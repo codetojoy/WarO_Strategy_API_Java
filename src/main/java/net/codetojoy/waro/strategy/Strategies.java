@@ -11,6 +11,7 @@ public class Strategies {
         Strategy result = null;
 
         if (mode.equalsIgnoreCase(MAX)) {
+            System.out.println("TRACER 28-FEB-2021 MAX CARD STRATEGY");
             result = new MaxCard();
         } else if (mode.equalsIgnoreCase(MIN)) {
             result = new MinCard();
