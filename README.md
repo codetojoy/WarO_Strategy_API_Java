@@ -10,3 +10,7 @@ Usage:
 
 * run server: `./run_server.sh`
 * test client: `./run_client.sh`
+
+TODO:
+
+* consider a delay as a config option, rather than a query parameter
